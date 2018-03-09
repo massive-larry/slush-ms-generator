@@ -5,7 +5,7 @@ const packageConfigTransformer = function (options) {
         console.log('answers from input', options);
         console.log('file recieved', file);
         cb();
-    })
+    });
 };
 
 module.exports = packageConfigTransformer;

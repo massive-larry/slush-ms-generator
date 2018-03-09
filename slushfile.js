@@ -14,11 +14,12 @@ const paths = {
 
 gulp.task('default', (done) => {
     inquirer.prompt([
-        { type: 'input', name: 'projectName', message: 'enter project name (service-)', default: gulp.args.join(' ')},
+        { type: 'input', name: 'projectName', message: 'enter project name (service-)', default: getNameProposal() },
         { type: 'list', name: 'testType', choices:['unit', 'component', 'integration'], message: 'What kind(s) of tests will you run' },
-        { type: 'confirm', name: 'areYouSure', message: 'are you done?' },
+        { type: 'confirm', name: 'done?', message: 'are you done?' },
     ], (answers) => {
         if(!answers.areYouSure) {
+            console.log('done?',answers.areYouSure);
             return done()
         }
         gulp.src(__dirname + '/templates/**')
@@ -33,3 +34,12 @@ gulp.task('default', (done) => {
             .resume()
     })
 });
+
+
+function getNameProposal() {
+    try {
+        return require(path.join(process.cwd(), 'package.json')).name
+    } catch (e) {
+        return path.basename(process.cwd())
+    }
+}
