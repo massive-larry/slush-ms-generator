@@ -1,4 +1,4 @@
-# Massive Template
+# [[ Inter Project Name ]]
 How to start the microservice:
 
 For locahost, set up your ENV variable CONFIG_ENV to localhost
