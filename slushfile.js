@@ -9,7 +9,7 @@ const path = require('path');
 const packageConfigTransformer = require('./transformers/project');
 
 const paths = {
-    cwd: path.resolve(__dirname, process.cwd, './')
+    cwd: path.resolve(__dirname, process.cwd(), './')
 };
 
 gulp.task('default', (done) => {
