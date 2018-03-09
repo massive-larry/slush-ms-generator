@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 gulp.task('default', (done) => {
     inquirer.prompt([
         { type: 'input', name: 'projectName', message: 'enter project name (service-)', default: gulp.args.join(' ')},
-        { type: 'list', name: 'testType', message: 'What kind(s) of tests will you run' },
+        { type: 'list', name: 'testType', choices:['unit', 'component', 'integration'], message: 'What kind(s) of tests will you run' },
         { type: 'confirm', name: 'areYouSure', message: 'are you done?' },
     ], (answers) => {
         if(!answers.areYouSure) {
