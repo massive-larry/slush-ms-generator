@@ -1,0 +1,29 @@
+{
+  "name": "slush-ms-generator",
+  "version": "0.1.0",
+  "description": "massive microservices generator using slush",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/massive-larry/slush-ms-generator.git"
+  },
+  "keywords": [
+    "slushgenerator"
+  ],
+  "author": "Larry Eliemenye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/massive-larry/slush-ms-generator/issues"
+  },
+  "homepage": "https://github.com/massive-larry/slush-ms-generator#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-conflict": "^0.4.0",
+    "gulp-install": "^1.1.0",
+    "gulp-template": "^5.0.0",
+    "inquirer": "^5.1.0"
+  }
+}
